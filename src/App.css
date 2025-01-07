@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding-top: 64px;
+    color: #333;
+
+    --font-firts: Helvetica, Arial, sans-serif;
+    --font-second: 'Spectral', Georgia;
+
+    font-family: var(--font-firts);
+}
+
+ul, li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+button, input {
+    display: block;
+    font-size: 1rem;
+    font-family: var(--font-firts);
+    color: #333;
+}
+
+.container {
+    max-width: 1000px; /* Pode usar um valor em REM também (16px) */
+    padding: 0 16px; /* 1rem */
+    margin: 0 auto;
+}
+
+.title {
+    font-family: var(--font-second);
+    line-height: 1;
+    font-size: 3rem;
+    margin: 1rem 0;
+    position: relative;
+    z-index: 1;
+}
+
+.title::after {
+    content: '';
+    display: block;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: #fb1;
+    position: absolute;
+    bottom: 5px;
+    left: -5px;
+    border-radius: 0.2rem;
+    z-index: -1;
+}
+
+/* -------------------- */
+.animeLeft {
+    opacity: 0;
+    transform: translateX(-20px);
+    animation: animeLeft 0.4s forwards;
+}
+
+@keyframes animeLeft {
+    to {
+        opacity: 1;
+        transform: initial;
+    }
+}
