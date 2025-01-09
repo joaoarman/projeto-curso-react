@@ -6,8 +6,6 @@ const ProtectedRoute = ({ children }) => {
 
     const { isLogged } = React.useContext(UserContext);
 
-    console.log(isLogged)
-
     if(isLogged === true) {
         return children;
     } else if(isLogged === false) {
