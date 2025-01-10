@@ -82,6 +82,7 @@
 .navMobile {
     display: block;
     position: absolute;
+    height: auto;
     top: 70px; 
     right: 0px;
     padding: 0 1rem;
