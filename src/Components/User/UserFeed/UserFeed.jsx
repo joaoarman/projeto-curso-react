@@ -1,11 +1,12 @@
 import React from 'react'
+import Feed from '../../Feed/Feed'
 
-const Feed = () => {
+const UserFeed = ({ user }) => {
   return (
     <div>
-      Feed
+      <Feed user={user}/>
     </div>
   )
 }
 
-export default Feed
+export default UserFeed
