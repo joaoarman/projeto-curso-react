@@ -11,6 +11,9 @@ import Footer from './Components/Footer/Footer'
 import Account from './Components/Account/Account'
 import ProtectedRoute from './Components/Helper/ProtectedRoute'
 import User from './Components/User/User'
+import Photo from './Components/Photo/Photo'
+import UserProfile from './Components/User/UserProfile/UserProfile'
+import NotFound from './Components/Helper/NotFound/NotFound'
 
 
 function App() {
@@ -33,6 +36,9 @@ function App() {
               }
             >
             </Route>
+            <Route path='/foto/:id' element={<Photo />}></Route>
+            <Route path='/perfil/:user' element={<UserProfile />}></Route>
+            <Route path='*' element={<NotFound />}></Route>
           </Routes>
           <Footer />
         </UserStorage>

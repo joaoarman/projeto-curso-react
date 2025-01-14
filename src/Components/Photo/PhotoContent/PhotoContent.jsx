@@ -6,7 +6,7 @@ import { UserContext } from '../../../Contexts/userContext';
 import PhotoDelete from '../PhotoDelete/PhotoDelete';
 import ImageSkeleton from '../../Helper/ImageSkeleton/ImageSkeleton';
 
-const PhotoContent = ({ data }) => {
+const PhotoContent = ({ data, single }) => {
 
   const user = React.useContext(UserContext)
   
@@ -14,7 +14,7 @@ const PhotoContent = ({ data }) => {
   
 
   return (
-    <div className={styles.photo}>
+    <div className={`${styles.photo} ${single ? styles.single : ''}`}>
 
       <div className={styles.img}>
         <ImageSkeleton src={photo.src} alt={photo.title} />
@@ -35,7 +35,7 @@ const PhotoContent = ({ data }) => {
           </ul>
         </div>
       </div>
-      <PhotoComments id={photo.id} comments={comments} />
+      <PhotoComments id={photo.id} single={single} comments={comments} />
     </div>
   );
 };
