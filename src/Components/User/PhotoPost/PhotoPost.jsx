@@ -5,6 +5,7 @@ import Button from '../../Form/Button/Button'
 import useForm from '../../../Hooks/useForm'
 import useFetch from '../../../Hooks/useFetch'
 import Error from '../../Helper/Error'
+import Head from '../../Helper/Head'
 
 import { PHOTO_POST } from '../../../../API'
 import { useNavigate } from 'react-router-dom'
@@ -48,6 +49,8 @@ const PhotoPost = () => {
 
   return (
     <div className={`${styles.photoPost} animeLeft` }>
+
+      <Head title={user}/>
 
       <form onSubmit={handleSubmit}>
 
