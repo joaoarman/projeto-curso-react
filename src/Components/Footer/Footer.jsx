@@ -5,7 +5,7 @@ import Dogs from '../../Assets/dogs.svg?react';
 const Footer = () => {
   return (
     <footer className={styles.footer}>
-      <Dogs />
+        <Dogs />
         <p>Dogs. Alguns direitos Reservados.</p>
     </footer>
   )

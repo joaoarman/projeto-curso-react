@@ -50,7 +50,7 @@ const PhotoPost = () => {
   return (
     <div className={`${styles.photoPost} animeLeft` }>
 
-      <Head title={user}/>
+      <Head title="Postar Foto"/>
 
       <form onSubmit={handleSubmit}>
 

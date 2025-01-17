@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link, Navigate } from 'react-router-dom';
 import Input from '../../Form/Input/Input';
-import Error from '../../Helper/Error';
+import Error2 from '../../Helper/Error';
 import Button from '../../Form/Button/Button';
 import stylesBtn from '../../Form/Button/Button.module.css';
 import useForm from '../../../Hooks/useForm';
@@ -47,7 +47,7 @@ const LoginForm = () => {
           
           {loading ? <Button disabled>Carregando...</Button> : <Button>Entrar</Button>}
           
-          <Error error={error}/>
+          <Error2 error={error}/>
 
       </form>
       <Link className={styles.perdeu} to="/login/perdeu">Perdeu a Senha?</Link>
